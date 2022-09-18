@@ -255,7 +255,13 @@ export default class App extends Component {
               <img
                 alt="logo"
                 src={require("./Assets/instagram_logo.png")}
-                style={{ width: "75%", height: undefined, aspectRatio: 1 }}
+                style={{
+                  width: "75%",
+                  maxHeight: "80%",
+                  height: undefined,
+                  aspectRatio: 1,
+                  objectFit: "contain",
+                }}
               />
             </div>
             <div
