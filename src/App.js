@@ -186,6 +186,7 @@ export default class App extends Component {
         <div
           className="flexColumn"
           style={{
+            boxSizing: "border-box",
             width: "100%",
             height: "15%",
             justifyContent: "space-between",
@@ -197,22 +198,18 @@ export default class App extends Component {
               flexDirection: "row",
               alignItems: "center",
               width: "100%",
+              height: "100%",
             }}
           >
+            <img
+              alt="logo"
+              src={require("./Assets/logo.png")}
+              className="App-logo"
+              style={{ height: "80%", width: "25%" }}
+            />
             <div
               style={{
-                flex: 1,
-              }}
-            >
-              <img
-                alt="logo"
-                src={require("./Assets/logo.png")}
-                className="App-logo"
-              />
-            </div>
-            <div
-              style={{
-                flex: 2,
+                width: "50%",
                 textAlign: "center",
               }}
             >
@@ -229,27 +226,31 @@ export default class App extends Component {
             </div>
             <div
               style={{
-                flex: 1,
+                width: "25%",
               }}
             ></div>
           </div>
-
-          <a
-            className="flexColumn"
-            href="https://www.instagram.com/pizzamarss/"
-            style={{ textDecoration: "none", justifyContent: "space-between" }}
+          <div
+            className="flexRow"
+            style={{
+              width: "100%",
+              paddingTop: "2%",
+              paddingBottom: "2%",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
           >
-            <div
+            <a
               className="flexRow"
+              href="https://www.instagram.com/pizzamarss/"
               style={{
-                width: "100%",
-                paddingTop: "2%",
-                paddingBottom: "2%",
+                textDecoration: "none",
                 justifyContent: "center",
                 alignItems: "center",
               }}
             >
               <div
+                className="flexRow"
                 style={{
                   height: "100%",
                   width: "15%",
@@ -270,15 +271,15 @@ export default class App extends Component {
                 />
               </div>
               <div
-                className="header-L"
+                className="flexColumn header-L"
                 style={{
                   justifyContent: "center",
                 }}
               >
                 <span>pizzamarss</span>
               </div>
-            </div>
-          </a>
+            </a>
+          </div>
         </div>
         <div style={{ height: "2%" }}></div>
         <div className="listContainer">
