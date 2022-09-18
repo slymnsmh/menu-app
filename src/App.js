@@ -233,44 +233,50 @@ export default class App extends Component {
               }}
             ></div>
           </div>
+
           <a
+            className="flexColumn"
             href="https://www.instagram.com/pizzamarss/"
-            className="flexRow"
-            style={{
-              width: "100%",
-              paddingTop: "2%",
-              justifyContent: "center",
-              alignItems: "center",
-              textDecoration: "none",
-            }}
+            style={{ textDecoration: "none", justifyContent: "space-between" }}
           >
             <div
+              className="flexRow"
               style={{
-                height: "100%",
-                width: "15%",
+                width: "100%",
+                paddingTop: "2%",
+                paddingBottom: "2%",
+                justifyContent: "center",
                 alignItems: "center",
-                justifyContent: "center",
               }}
             >
-              <img
-                alt="logo"
-                src={require("./Assets/instagram_logo.png")}
+              <div
                 style={{
-                  width: "75%",
-                  maxHeight: "80%",
-                  height: undefined,
-                  aspectRatio: 1,
-                  objectFit: "contain",
+                  height: "100%",
+                  width: "15%",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
-              />
-            </div>
-            <div
-              className="header-L"
-              style={{
-                justifyContent: "center",
-              }}
-            >
-              <span>pizzamarss</span>
+              >
+                <img
+                  alt="logo"
+                  src={require("./Assets/instagram_logo.png")}
+                  style={{
+                    width: "75%",
+                    maxHeight: "80%",
+                    height: undefined,
+                    aspectRatio: 1,
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+              <div
+                className="header-L"
+                style={{
+                  justifyContent: "center",
+                }}
+              >
+                <span>pizzamarss</span>
+              </div>
             </div>
           </a>
         </div>
