@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/menu-app/static/css/main.76aa9712.css",
-    "main.js": "/menu-app/static/js/main.c89595cf.js",
+    "main.css": "/menu-app/static/css/main.943f1305.css",
+    "main.js": "/menu-app/static/js/main.c208418e.js",
     "static/js/787.db49c178.chunk.js": "/menu-app/static/js/787.db49c178.chunk.js",
     "static/media/instagram_logo.png": "/menu-app/static/media/instagram_logo.fac915bdead96a0bd71c.png",
     "static/media/logo.png": "/menu-app/static/media/logo.c3a3aaa93357f86a7570.png",
     "index.html": "/menu-app/index.html",
-    "main.76aa9712.css.map": "/menu-app/static/css/main.76aa9712.css.map",
-    "main.c89595cf.js.map": "/menu-app/static/js/main.c89595cf.js.map",
+    "main.943f1305.css.map": "/menu-app/static/css/main.943f1305.css.map",
+    "main.c208418e.js.map": "/menu-app/static/js/main.c208418e.js.map",
     "787.db49c178.chunk.js.map": "/menu-app/static/js/787.db49c178.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.76aa9712.css",
-    "static/js/main.c89595cf.js"
+    "static/css/main.943f1305.css",
+    "static/js/main.c208418e.js"
   ]
 }
