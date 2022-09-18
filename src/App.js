@@ -1,6 +1,11 @@
 import { Component } from "react";
 import "./App.css";
+import Beverage from "./Components/beverage";
+import Ekstra from "./Components/ekstra";
+import EkstraIngredients from "./Components/ekstraIngredients";
 import Menu from "./Components/menu";
+import Sauce from "./Components/sauce";
+import Sweet from "./Components/sweet";
 
 export default class App extends Component {
   constructor(props) {
@@ -131,29 +136,34 @@ export default class App extends Component {
             { id: 2, name: "Mayonez", sizes: "1", price: 2 },
           ],
           beverage: [
-            { id: 1, name: "Coca Cola", size: "3-5", price: "18-23" },
-            { id: 1, name: "Coca Cola Zero", size: "3-5", price: "18-23" },
-            { id: 1, name: "Fanta", size: "3-5", price: "18-23" },
-            { id: 1, name: "Sprite", size: "3-5", price: "18-23" },
-            { id: 1, name: "Cappy Vişne", size: "3-5", price: "18-23" },
-            { id: 1, name: "Cappy Portakal", size: "3-5", price: "18-23" },
-            { id: 1, name: "Cappy Şeftali", size: "3-5", price: "18-23" },
-            { id: 1, name: "Cappy Kayısı", size: "3-5", price: "18-23" },
-            { id: 1, name: "Cappy Atom", size: "3-5", price: "18-23" },
-            { id: 1, name: "Soda (Sade)", size: "1", price: "8" },
-            { id: 1, name: "Soda (Karpuzlu)", size: "1", price: "8" },
-            { id: 1, name: "Soda (Çilekli)", size: "1", price: "8" },
-            { id: 1, name: "Soda (Limonlu)", size: "1", price: "10" },
-            { id: 1, name: "Su", size: "3-4", price: "5-7" },
-            { id: 1, name: "Ayran", size: "2", price: "9" },
+            { id: 1, name: "Coca Cola", sizes: "3-5", price: "18-23" },
+            { id: 1, name: "Coca Cola Zero", sizes: "3-5", price: "18-23" },
+            { id: 1, name: "Fanta", sizes: "3-5", price: "18-23" },
+            { id: 1, name: "Sprite", sizes: "3-5", price: "18-23" },
+            { id: 1, name: "Cappy Vişne", sizes: "3-5", price: "18-23" },
+            { id: 1, name: "Cappy Portakal", sizes: "3-5", price: "18-23" },
+            { id: 1, name: "Cappy Şeftali", sizes: "3-5", price: "18-23" },
+            { id: 1, name: "Cappy Kayısı", sizes: "3-5", price: "18-23" },
+            { id: 1, name: "Cappy Atom", sizes: "3-5", price: "18-23" },
+            { id: 1, name: "Soda (Sade)", sizes: "1", price: "8" },
+            { id: 1, name: "Soda (Karpuzlu)", sizes: "1", price: "8" },
+            { id: 1, name: "Soda (Çilekli)", sizes: "1", price: "8" },
+            { id: 1, name: "Soda (Limonlu)", sizes: "1", price: "10" },
+            { id: 1, name: "Su", sizes: "3-4", price: "5-7" },
+            { id: 1, name: "Ayran", sizes: "2", price: "9" },
           ],
           ekstra: [
-            { id: 1, name: "Patates (Porsiyon)", size: "1", price: "20" },
-            { id: 2, name: "Patates (Büyük Porsiyon)", size: "2", price: "30" },
+            { id: 1, name: "Patates (Porsiyon)", sizes: "1", price: "20" },
+            {
+              id: 2,
+              name: "Patates (Büyük Porsiyon)",
+              sizes: "2",
+              price: "30",
+            },
           ],
           sweets: [
-            { id: 1, name: "Krater", size: "3", price: "20" },
-            { id: 2, name: "Sufle", size: "3", price: "20" },
+            { id: 1, name: "Krater", sizes: "3", price: "20" },
+            { id: 2, name: "Sufle", sizes: "3", price: "20" },
           ],
           ekstraIngredients: [
             { id: 1, name: "Mısır", price: 6 },
@@ -174,50 +184,92 @@ export default class App extends Component {
     return (
       <div className="mainContainer">
         <div
+          className="flexColumn"
           style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
             width: "100%",
-            height: "10%",
+            height: "15%",
+            justifyContent: "space-between",
           }}
         >
           <div
             style={{
-              flex: 1,
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              width: "100%",
             }}
           >
-            <img
-              alt="logo"
-              src={require("./Assets/logo.png")}
-              className="App-logo"
-            />
-          </div>
-          <div
-            style={{
-              flex: 2,
-              textAlign: "center",
-            }}
-          >
-            <span
+            <div
               style={{
-                width: "100%",
-                fontSize: "7vmin",
-                fontWeight: "bold",
-                color: "white",
+                flex: 1,
               }}
             >
-              MENÜ
-            </span>
+              <img
+                alt="logo"
+                src={require("./Assets/logo.png")}
+                className="App-logo"
+              />
+            </div>
+            <div
+              style={{
+                flex: 2,
+                textAlign: "center",
+              }}
+            >
+              <span
+                style={{
+                  width: "100%",
+                  fontSize: "7vmin",
+                  fontWeight: "bold",
+                  color: "white",
+                }}
+              >
+                MENÜ
+              </span>
+            </div>
+            <div
+              style={{
+                flex: 1,
+              }}
+            ></div>
           </div>
-          <div
+          <a
+            href="https://www.instagram.com/pizzamarss/"
+            className="flexRow"
             style={{
-              flex: 1,
+              width: "100%",
+              paddingTop: "2%",
+              justifyContent: "center",
+              alignItems: "center",
+              textDecoration: "none",
             }}
-          ></div>
+          >
+            <div
+              style={{
+                height: "100%",
+                width: "15%",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <img
+                alt="logo"
+                src={require("./Assets/instagram_logo.png")}
+                style={{ width: "75%", height: undefined, aspectRatio: 1 }}
+              />
+            </div>
+            <div
+              className="header-L"
+              style={{
+                justifyContent: "center",
+              }}
+            >
+              <span>pizzamarss</span>
+            </div>
+          </a>
         </div>
         <div style={{ height: "2%" }}></div>
-        <div className="listContainer" name="pizzas">
+        <div className="listContainer">
           <div
             style={{
               height: "5vh",
@@ -243,7 +295,8 @@ export default class App extends Component {
               contentList={this.state.content}
             />
           ))}
-          {/* <div
+
+          <div
             style={{
               height: "5vh",
               display: "flex",
@@ -257,8 +310,33 @@ export default class App extends Component {
               {"İçecekler"}
             </span>
           </div>
-          {this.state.menu[0].sauce.map((item, index) => (
-            <Menu
+          {this.state.menu[0].beverage.map((item, index) => (
+            <Beverage
+              key={index}
+              name={item.name}
+              price={item.price}
+              sizes={item.sizes}
+              sizesList={this.state.sizes}
+              contentList={this.state.content}
+            />
+          ))}
+
+          <div
+            style={{
+              height: "5vh",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              paddingLeft: "2%",
+              backgroundColor: "rgb(235, 57, 23)",
+            }}
+          >
+            <span className="categoryHeader" style={{ color: "white" }}>
+              {"Tatlılar"}
+            </span>
+          </div>
+          {this.state.menu[0].sweets.map((item, index) => (
+            <Sweet
               key={index}
               name={item.name}
               price={item.price}
@@ -267,7 +345,8 @@ export default class App extends Component {
               sizesList={this.state.sizes}
               contentList={this.state.content}
             />
-          ))} */}
+          ))}
+
           <div
             style={{
               height: "5vh",
@@ -283,7 +362,7 @@ export default class App extends Component {
             </span>
           </div>
           {this.state.menu[0].sauce.map((item, index) => (
-            <Menu
+            <Sauce
               key={index}
               name={item.name}
               price={item.price}
@@ -291,6 +370,54 @@ export default class App extends Component {
               sizes={item.sizes}
               sizesList={this.state.sizes}
               contentList={this.state.content}
+            />
+          ))}
+
+          <div
+            style={{
+              height: "5vh",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              paddingLeft: "2%",
+              backgroundColor: "rgb(235, 57, 23)",
+            }}
+          >
+            <span className="categoryHeader" style={{ color: "white" }}>
+              {"Ekstra"}
+            </span>
+          </div>
+          {this.state.menu[0].ekstra.map((item, index) => (
+            <Ekstra
+              key={index}
+              name={item.name}
+              price={item.price}
+              content={item.content}
+              sizes={item.sizes}
+              sizesList={this.state.sizes}
+              contentList={this.state.content}
+            />
+          ))}
+
+          <div
+            style={{
+              height: "5vh",
+              display: "flex",
+              flexDirection: "row",
+              alignItems: "center",
+              paddingLeft: "2%",
+              backgroundColor: "rgb(235, 57, 23)",
+            }}
+          >
+            <span className="categoryHeader" style={{ color: "white" }}>
+              {"Ekstra Malzemeler"}
+            </span>
+          </div>
+          {this.state.menu[0].ekstraIngredients.map((item, index) => (
+            <EkstraIngredients
+              key={index}
+              name={item.name}
+              price={item.price}
             />
           ))}
         </div>

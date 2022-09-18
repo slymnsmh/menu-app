@@ -37,6 +37,7 @@
   margin-right: auto;
   height: 20vmin;
   width: 23vmin;
+  object-fit: contain;
 }
 
 .menuImage {
@@ -66,8 +67,32 @@
   color: white;
 }
 
+.header-L {
+  font-size: 7vmin;
+  font-weight: bold;
+  color: white;
+}
+
 .categoryHeader {
   font-size: 7vmin;
+  font-weight: bold;
+  color: white;
+}
+
+.priceLabel-S {
+  font-size: 4vmin;
+  font-weight: bold;
+  color: white;
+}
+
+.priceLabel-M {
+  font-size: 5vmin;
+  font-weight: bold;
+  color: white;
+}
+
+.priceLabel-L {
+  font-size: 6vmin;
   font-weight: bold;
   color: white;
 }

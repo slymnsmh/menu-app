@@ -1,35 +1,20 @@
 import { Component } from "react";
 
-export default class Menu extends Component {
+export default class Sweet extends Component {
   constructor(props) {
     super(props);
     this.state = {
       /* imageSrc: "", */
-      contentIds: [],
-      contentNames: [],
       sizeIds: [],
       sizeNames: [],
     };
   }
 
   componentDidMount = () => {
-    this.props.content && this.getContentNames();
-    this.getPizzaSizeNames();
+    this.getSizeNames();
   };
 
-  getContentNames = () => {
-    let contentNames = [];
-    this.setState({ contentIds: this.props.content.split("-") }, () => {
-      this.state.contentIds.forEach((element) => {
-        contentNames.push(
-          this.props.contentList.find((item) => item.id == element).name
-        );
-      });
-      this.setState({ contentNames });
-    });
-  };
-
-  getPizzaSizeNames = () => {
+  getSizeNames = () => {
     let sizeNames = [];
     this.setState(
       {
@@ -43,7 +28,8 @@ export default class Menu extends Component {
           this.props.sizes.includes("-") &&
           this.state.sizeIds.forEach((id) => {
             sizeNames.push(
-              this.props.sizesList[0].pizza.find((item) => item.id == id).name
+              this.props.sizesList[0].beverage.find((item) => item.id == id)
+                .name
             );
           });
         this.setState({ sizeNames });
@@ -54,23 +40,8 @@ export default class Menu extends Component {
   render() {
     return (
       <div className="menuContainer">
-        {/* <div
-          className="flexColumn"
-          style={{
-            height: "100%",
-            width: "40%",
-            boxSizing: "border-box",
-            paddingRight: "5%",
-          }}
-        >
-          <img
-            alt="menu1"
-            src={require("../Assets/" + this.props.image)}
-            className="menuImage"
-          />
-        </div> */}
         <div
-          className={this.props.content ? "flexColumn" : "flexRow"}
+          className={this.state.sizeNames.length > 1 ? "flexColumn" : "flexRow"}
           style={{
             height: "100%",
             width: "100%",
@@ -82,31 +53,13 @@ export default class Menu extends Component {
             style={{
               boxSizing: "border-box",
               paddingBottom: "1%",
+              width: "100%",
             }}
           >
             <span>{this.props.name}</span>
           </div>
-          {this.props.content && (
-            <div
-              style={{
-                color: "white",
-                wordBreak: "break-word",
-                overflow: "clip",
-                paddingBottom: "1%",
-              }}
-            >
-              <span style={{ fontWeight: "bold" }}>{"İçerik: "}</span>
-              <span>
-                {this.state.contentNames.map(
-                  (name, index) =>
-                    name +
-                    (index !== this.state.contentNames.length - 1 ? ", " : "")
-                )}
-              </span>
-            </div>
-          )}
           <div
-            className="flexRow alignFE priceLabel-S"
+            className="flexRow priceLabel-S"
             style={{
               color: "white",
               wordBreak: "break-word",
@@ -118,7 +71,7 @@ export default class Menu extends Component {
             {this.state.sizeNames.length > 1 ? (
               this.state.sizeNames.map((name, index) => (
                 <span className="flexRow">
-                  <span>{name + " Boy: "}</span>
+                  <span>{name + ": "}</span>
 
                   <span>
                     {(this.props.price.includes("-")
