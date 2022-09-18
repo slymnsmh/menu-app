@@ -73,6 +73,12 @@
   color: white;
 }
 
+.header-M {
+  font-size: 5vmin;
+  font-weight: bold;
+  color: white;
+}
+
 .categoryHeader {
   font-size: 7vmin;
   font-weight: bold;

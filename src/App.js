@@ -188,7 +188,7 @@ export default class App extends Component {
           style={{
             boxSizing: "border-box",
             width: "100%",
-            height: "15%",
+            height: "10%",
             justifyContent: "space-between",
           }}
         >
@@ -229,56 +229,6 @@ export default class App extends Component {
                 width: "25%",
               }}
             ></div>
-          </div>
-          <div
-            className="flexRow"
-            style={{
-              width: "100%",
-              paddingTop: "2%",
-              paddingBottom: "2%",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <a
-              className="flexRow"
-              href="https://www.instagram.com/pizzamarss/"
-              style={{
-                textDecoration: "none",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div
-                className="flexRow"
-                style={{
-                  height: "100%",
-                  width: "15%",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <img
-                  alt="logo"
-                  src={require("./Assets/instagram_logo.png")}
-                  style={{
-                    width: "75%",
-                    maxHeight: "80%",
-                    height: undefined,
-                    aspectRatio: 1,
-                    objectFit: "contain",
-                  }}
-                />
-              </div>
-              <div
-                className="flexColumn header-L"
-                style={{
-                  justifyContent: "center",
-                }}
-              >
-                <span>pizzamarss</span>
-              </div>
-            </a>
           </div>
         </div>
         <div style={{ height: "2%" }}></div>
@@ -433,6 +383,66 @@ export default class App extends Component {
               price={item.price}
             />
           ))}
+        </div>
+        <div
+          className="flexColumn"
+          style={{
+            boxSizing: "border-box",
+            width: "100%",
+            height: "10%",
+            justifyContent: "space-between",
+          }}
+        >
+          <div
+            className="flexRow"
+            style={{
+              width: "100%",
+              paddingBottom: "2%",
+              justifyContent: "center",
+            }}
+          >
+            <a
+              className="flexRow"
+              href="https://www.instagram.com/pizzamarss/"
+              style={{
+                width: "100%",
+                height: "100%",
+                textDecoration: "none",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <div
+                className="flexRow"
+                style={{
+                  height: "100%",
+                  width: "15%",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <img
+                  alt="logo"
+                  src={require("./Assets/instagram_logo.png")}
+                  style={{
+                    width: "60%",
+                    maxHeight: "80%",
+                    height: undefined,
+                    aspectRatio: 1,
+                    objectFit: "contain",
+                  }}
+                />
+              </div>
+              <div
+                className="header-M"
+                style={{
+                  justifyContent: "center",
+                }}
+              >
+                <span>pizzamarss</span>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     );
