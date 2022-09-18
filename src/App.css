@@ -8,6 +8,10 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
+  aspect-ratio: 16 / 9;
+  max-height: 1920px;
+  max-width: 1080px;
+  margin: auto;
 }
 
 /* rgb(60, 174, 32) rgb(235, 57, 23)*/
