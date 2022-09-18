@@ -390,6 +390,7 @@ export default class App extends Component {
             boxSizing: "border-box",
             width: "100%",
             height: "10%",
+            paddingTop: "5%",
             justifyContent: "space-between",
           }}
         >
